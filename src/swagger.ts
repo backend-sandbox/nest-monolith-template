@@ -1,6 +1,6 @@
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import fs from 'fs';
+import * as fs from 'fs';
 
 type SwaggerOperation = { get: (key: string) => string };
 
