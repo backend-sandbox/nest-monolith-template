@@ -7,6 +7,5 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always"
   },
-  "vitest.disableWorkspaceWarning": true,
-  "cSpell.words": ["cands", "KINGUIN", "OPDC"]
+  "cSpell.words": []
 }
