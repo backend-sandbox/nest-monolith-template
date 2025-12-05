@@ -1,0 +1,27 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Connection URLs are no longer supported in schema files.
+  // Move connection configuration for Migrate to prisma.config.ts and pass either
+  // `adapter` (for a direct DB connection) or `accelerateUrl` (for Accelerate)
+  // to the PrismaClient constructor.
+  // See: https://pris.ly/d/config-datasource and https://pris.ly/d/prisma7-client-config
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  username String @unique
+  email    String @unique
+  password String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
