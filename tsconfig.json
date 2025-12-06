@@ -13,10 +13,18 @@
     "incremental": true,
     "skipLibCheck": true,
     "importHelpers": true,
+    "esModuleInterop": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
+    "moduleResolution": "node",
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@common/*": ["src/common/*"],
+      "@prisma/*": ["prisma/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "prisma/generated"]
 }
