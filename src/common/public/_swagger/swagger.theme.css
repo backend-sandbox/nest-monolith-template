@@ -1,0 +1,118 @@
+/* Dark background */
+html.dark-mode body,
+html.dark-mode .swagger-ui,
+html.dark-mode .swagger-ui .scheme-container {
+  background-color: #0b0f19 !important;
+}
+
+/* Text */
+html.dark-mode .swagger-ui,
+html.dark-mode .swagger-ui label,
+html.dark-mode .swagger-ui .opblock-summary-description,
+html.dark-mode .swagger-ui .parameter__name,
+html.dark-mode .swagger-ui .response-col_status {
+  color: #e5e7eb !important;
+}
+
+/* Headers - Make them more vibrant */
+html.dark-mode .swagger-ui h1,
+html.dark-mode .swagger-ui h2,
+html.dark-mode .swagger-ui h3,
+html.dark-mode .swagger-ui h4,
+html.dark-mode .swagger-ui h5,
+html.dark-mode .swagger-ui .opblock-summary,
+html.dark-mode .swagger-ui .opblock-summary-method,
+html.dark-mode .swagger-ui .info .title {
+  color: #e5e7eb !important;
+  font-weight: 600 !important;
+}
+
+/* Endpoint names with lighter HTTP method colors */
+html.dark-mode .swagger-ui .opblock.opblock-get .opblock-summary-path,
+html.dark-mode .swagger-ui .opblock.opblock-get .opblock-summary-path__deprecated {
+  color: #66ffff !important; /* Lighter cyan */
+}
+
+html.dark-mode .swagger-ui .opblock.opblock-post .opblock-summary-path,
+html.dark-mode .swagger-ui .opblock.opblock-post .opblock-summary-path__deprecated {
+  color: #80ff66 !important; /* Lighter green */
+}
+
+html.dark-mode .swagger-ui .opblock.opblock-put .opblock-summary-path,
+html.dark-mode .swagger-ui .opblock.opblock-put .opblock-summary-path__deprecated {
+  color: #ff66ff !important; /* Lighter magenta */
+}
+
+html.dark-mode .swagger-ui .opblock.opblock-delete .opblock-summary-path,
+html.dark-mode .swagger-ui .opblock.opblock-delete .opblock-summary-path__deprecated {
+  color: #ff6680 !important; /* Lighter red */
+}
+
+html.dark-mode .swagger-ui .opblock.opblock-patch .opblock-summary-path,
+html.dark-mode .swagger-ui .opblock.opblock-patch .opblock-summary-path__deprecated {
+  color: #ffb366 !important; /* Light orange */
+}
+
+/* Neon accents */
+html.dark-mode .swagger-ui .opblock.opblock-get {
+  border-color: #00f5ff;
+}
+html.dark-mode .swagger-ui .opblock.opblock-post {
+  border-color: #39ff14;
+}
+html.dark-mode .swagger-ui .opblock.opblock-put {
+  border-color: #ff00ff;
+}
+html.dark-mode .swagger-ui .opblock.opblock-delete {
+  border-color: #ff1744;
+}
+
+/* Buttons */
+.swagger-ui .btn.execute {
+  background-color: #00f5ff;
+  color: #000;
+}
+
+/* Authorization modal and components */
+html.dark-mode .swagger-ui .auth-wrapper,
+html.dark-mode .swagger-ui .auth-container,
+html.dark-mode .swagger-ui .dialog-ux .modal-ux,
+html.dark-mode .swagger-ui .dialog-ux .modal-ux-content {
+  background-color: #0b0f19 !important;
+  color: #e5e7eb !important;
+}
+
+html.dark-mode .swagger-ui .auth-container .auth-wrapper .auth-container,
+html.dark-mode .swagger-ui .auth-container h4,
+html.dark-mode .swagger-ui .auth-container .wrapper,
+html.dark-mode .swagger-ui .auth-container .errors,
+html.dark-mode .swagger-ui .auth-container .description {
+  background-color: #0b0f19 !important;
+  color: #e5e7eb !important;
+}
+
+html.dark-mode .swagger-ui .auth-container input[type='text'],
+html.dark-mode .swagger-ui .auth-container input[type='password'],
+html.dark-mode .swagger-ui .auth-container textarea {
+  background-color: #1a1f2e !important;
+  color: #e5e7eb !important;
+  border: 1px solid #00f5ff !important;
+}
+
+html.dark-mode .swagger-ui .btn.authorize,
+html.dark-mode .swagger-ui .btn.auth {
+  background-color: #097270 !important;
+  color: #e5e7eb !important;
+  border: none !important;
+}
+
+html.dark-mode .swagger-ui .btn.cancel {
+  background-color: #1a1f2e !important;
+  color: #e5e7eb !important;
+  border: 1px solid #666 !important;
+}
+
+/* Hide by default (enabled via JS) */
+/* html:not(.dark-mode) .swagger-ui {
+  filter: invert(0);
+} */
