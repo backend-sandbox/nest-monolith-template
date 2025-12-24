@@ -1,26 +1,31 @@
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
-import { AppModule } from './app/app.module';
-import { buildSwagger } from './swagger';
+import { createNestApp } from '@common/utils';
+import { Logger } from '@nestjs/common';
 import { env } from 'process';
+import { AppModule } from './app/app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const logger = new Logger('App Bootstrap');
 
-  buildSwagger({ app, service: 'main' });
-  app.useGlobalPipes(
-    new ValidationPipe({
-      enableDebugMessages: true,
-      whitelist: true,
-      transform: true,
-    }),
-  );
+  const app = await createNestApp({
+    appModule: AppModule,
+    http: {
+      cors: ['*'],
+    },
+    swagger: {
+      code: 'main',
+      title: 'Test App PJ',
+      description: 'The Test App PJ API description',
+      version: '1.0',
+    },
+    usePassport: true,
+    isSentryEnabled: false,
+  });
 
   const port = env.PORT ?? 3000;
 
   await app.listen(port, () => {
-    console.log(`Application is running on: http://localhost:${port}`);
-    console.log(`Swagger is running on: http://localhost:${port}/api-docs`);
+    logger.log(`Application is running on: http://localhost:${port}`);
+    logger.log(`🟢 Swagger is running on: http://localhost:${port}/swagger`);
   });
 }
 
