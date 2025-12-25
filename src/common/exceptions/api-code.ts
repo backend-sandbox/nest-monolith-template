@@ -6,6 +6,11 @@ export const ApiCode = {
     message: 'Invalid username or password',
     statusCode: HttpStatus.BAD_REQUEST,
   },
+  INSUFFICIENT_PERMISSIONS: {
+    code: 'INSUFFICIENT_PERMISSIONS',
+    message: 'Insufficient permissions',
+    statusCode: HttpStatus.FORBIDDEN,
+  },
   BAD_REQUEST: {
     code: 'BAD_REQUEST',
     message: 'The request could not be understood or was missing required parameters.',

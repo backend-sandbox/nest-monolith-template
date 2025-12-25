@@ -32,7 +32,7 @@ export class UserRepository {
 
     if (!user || !user.password) return null;
 
-    return user as UserWithPasswordDto; // ! I don't like this solution, solve it later
+    return user as UserWithPasswordDto;
   }
 
   async createUser(data: Prisma.UserCreateInput): Promise<UserDto> {
