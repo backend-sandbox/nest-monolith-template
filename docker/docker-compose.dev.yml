@@ -9,6 +9,7 @@ services:
       POSTGRES_USER: dev_user
       POSTGRES_PASSWORD: dev_password
       POSTGRES_DB: sandbox_prisma_db
+      TZ: Europe/Kyiv
     volumes:
       - test-prisma-data:/var/lib/postgresql/data
 
@@ -22,6 +23,7 @@ services:
       POSTGRES_USER: dev_user
       POSTGRES_PASSWORD: dev_password
       POSTGRES_DB: sandbox_typeorm_db
+      TZ: Europe/Kyiv
     volumes:
       - test-typeorm-data:/var/lib/postgresql/data
 
